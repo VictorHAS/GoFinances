@@ -18,13 +18,20 @@ export const Container = styled.div<ContainerProps>`
 
     nav {
       a {
-        color: #fff;
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        color: #fff;
+        opacity: 0.8;
 
         & + a {
           margin-left: 32px;
+        }
+
+        &[aria-current] {
+          opacity: 1;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ff872c;
         }
 
         &:hover {
